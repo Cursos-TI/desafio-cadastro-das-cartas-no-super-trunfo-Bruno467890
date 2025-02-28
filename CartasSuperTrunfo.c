@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    //Criando os variáveis
+    //Criando as variáveis
     char estado, codigo[50], cidade[50];
     int populacao, pontos_turisticos;
     float area_em_km_quadrado, pib;
