@@ -2,7 +2,7 @@
 
 int main(){
     //Criando as variáveis
-    char estado, codigo[50], cidade[50];
+    char estado, codigo[4], cidade[50];
     int populacao, pontos_turisticos;
     float area_em_km_quadrado, pib;
 
@@ -11,11 +11,10 @@ int main(){
     scanf("%c", &estado);
 
     printf("Digite o código da primeira carta: \n");
-    scanf("%s", &codigo);
-
+    fgets(codigo,4,stdin); //Adicionando o código que ler o string junto com espaço.
+    
     printf("Digite o nome da cidade da primeira carta: \n");
-    fgets(cidade, 50, stdin); //Adicionando o código que ler o string junto com espaço.
-    cidade[strcspn(cidade, "\n")] = 0;
+    fgets(cidade,50,stdin);  //Adicionando o código que ler o string junto com espaço. A questão é o scanf antes... usar o fgets tbm no anterior.
     
     printf("Digite a população da primeira carta: \n");
     scanf("%d", &populacao);
@@ -46,11 +45,10 @@ int main(){
     scanf("%c", &estado);
 
     printf("Digite o código da segunda carta: \n");
-    scanf("%s", &codigo);
+    fgets(codigo,4,stdin); //Adicionando o código que ler o string inteiro.
 
     printf("Digite o nome da cidade da segunda carta: \n");
-    fgets(cidade, 50, stdin); //Adicionando o código que ler o string inteiro.
-    cidade[strcspn(cidade, "\n")] = 0;
+    fgets(cidade,50,stdin); //Adicionando o código que ler o string inteiro.
 
     printf("Digite a população da segunda carta: \n");
     scanf("%d", &populacao);
