@@ -11,10 +11,10 @@ int main(){
     scanf("%c", &estado);
 
     printf("Digite o código da primeira carta: \n");
-    scanf("%s", &codigo);
+    scanf("%s", &codigo);//Aqui não usa o & por ser uma string. Como o código são três caracteres, não precisa usar o valor 50, bastaria usar 4.
 
     printf("Digite o nome da cidade da primeira carta: \n");
-    fgets(cidade, 50, stdin); //Adicionando o código que ler o string junto com espaço.
+    fgets(cidade, 50, stdin); //Adicionando o código que ler o string junto com espaço. A questão é o scanf antes... usar o fgtes tbm no anterior.
     cidade[strcspn(cidade, "\n")] = 0;
     
     printf("Digite a população da primeira carta: \n");
