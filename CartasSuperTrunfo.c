@@ -11,7 +11,7 @@ int main(){
     scanf("%c", &estado);
 
     printf("Digite o código da primeira carta: \n");
-    fgets(codigo,4,stdin); //Adicionando o código que ler o string junto com espaço.
+    fgets(codigo,4,stdin); //Adicionando o código que ler o string junto com espaço. Mudei o "scanf" para "fgets" como senher diz.
     
     printf("Digite o nome da cidade da primeira carta: \n");
     fgets(cidade,50,stdin);  //Adicionando o código que ler o string junto com espaço. A questão é o scanf antes... usar o fgets tbm no anterior.
