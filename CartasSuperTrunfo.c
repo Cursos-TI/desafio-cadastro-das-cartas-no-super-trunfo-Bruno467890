@@ -3,18 +3,19 @@
 int main(){
     //Criando as variáveis
     char estado, codigo[4], cidade[50];
-    int populacao, pontos_turisticos;
+    int populacao, pontos_turisticos, c;
     float area_em_km_quadrado, pib;
 
     //Começa a digitação da primeira carta.
     printf("Digite o estado da primeira carta: \n");
-    scanf("%c", &estado);
+    scanf("%c%*c", &estado);
 
     printf("Digite o código da primeira carta: \n");
-    fgets(codigo,4,stdin); //Adicionando o código que ler o string junto com espaço. Mudei o "scanf" para "fgets" como senhor diz.
+    fgets(codigo, 4 ,stdin);  //Adicionando um código que ler o string junto com espaço.
+    while ((c = getchar()) != '\n' && c != EOF); //Limpeza do buffer.
     
     printf("Digite o nome da cidade da primeira carta: \n");
-    fgets(cidade,50,stdin);  //Adicionando o código que ler o string junto com espaço. A questão é o scanf antes... usar o fgtes tbm no anterior.
+    fgets(cidade, 50 ,stdin);
     
     printf("Digite a população da primeira carta: \n");
     scanf("%d", &populacao);
@@ -39,16 +40,17 @@ int main(){
     printf("PIB: %.2f bilhões de reais\n", pib);
     printf("Número de Pontos Turísticos: %d\n", pontos_turisticos);
 
-    //Começa a digitação da segunda carta.
+    //Começa a digitação da segunda carta.(mesma orden da primeira)
     printf("\n");
     printf("Digite o estado da segunda carta: \n");
-    scanf("%c", &estado);
+    scanf("%c%*c", &estado);
 
     printf("Digite o código da segunda carta: \n");
-    fgets(codigo,4,stdin); //Adicionando o código que ler o string inteiro.
+    fgets(codigo, 4, stdin);
+    while ((c = getchar()) != '\n' && c != EOF);
 
     printf("Digite o nome da cidade da segunda carta: \n");
-    fgets(cidade,50,stdin); //Adicionando o código que ler o string inteiro.
+    fgets(cidade, 50, stdin); //Adicionando o código que ler o string inteiro.
 
     printf("Digite a população da segunda carta: \n");
     scanf("%d", &populacao);
